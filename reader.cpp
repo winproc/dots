@@ -24,7 +24,7 @@ PrMessage Interpreter::ExecOpcode(POpcodes opcode) {
 
     std::vector<int> arrayVec = opcode->OpcodesArray;
     for (std::vector<int>::iterator it = arrayVec.begin(); it != arrayVec.end(); it++) {
-        if ((it - arrayVec.begin()) % 2) { continue; } // find if iterator is at odd index
+        if ((it - arrayVec.begin()) % 2) { continue; } // if iterator is at odd index then ignore iteration
         switch(*it) {
             case 1:
                 std::cout << *(it + 0x1) << std::endl;
