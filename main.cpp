@@ -37,10 +37,9 @@ int main() {
         Opcodes opcodes = reader.GetOpcodes(tBuffer, bytesRead);
         reader.ExecOpcode(&opcodes);
     } else {
-        std::cout << GetLastError() << std::endl;
-        
+        std::cout << "error cd: " << GetLastError() << std::endl;
     }
     free(tBuffer);
-    
+    std::cin.ignore(); // wait for user
     return 0;
 }
