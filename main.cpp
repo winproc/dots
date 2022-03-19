@@ -40,6 +40,8 @@ int main() {
         std::cout << "error cd: " << GetLastError() << std::endl;
     }
     free(tBuffer);
+
+    std::cout << "\nExecution ended, press enter to exit" << std::endl;
     std::cin.ignore(); // wait for user
     return 0;
 }
